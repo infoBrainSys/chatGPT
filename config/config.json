@@ -1,8 +1,8 @@
 {
-  "model": "text-davinci-003",
-  "prompt": "Say this is a test",
-  "max_tokens": 7,
+  "model": "text-davinci-003",  
+  "max_tokens": 2048,
   "temperature": 0,
   "top_p": 1,
-  "n": 1
+  "n": 1,
+  "key": "YOUR KEY"
 }

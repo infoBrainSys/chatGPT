@@ -1,24 +1,26 @@
 package main
 
 import (
-	reqapi "Learn/reqApi"
-	"net/http"
+	reqapi "chatGPT/reqApi"
 
 	"github.com/gin-gonic/gin"
 )
-
 
 func main() {
 	app := gin.Default()
 	app.GET("/", func(ctx *gin.Context) {
 
-		a, err := reqapi.ReqApi()
+		// 获取传入的 Query 字段并拼接
+		prompt := ctx.Query("prompt")
+
+		// 调用 api
+		a, err := reqapi.ReqApi(prompt)
 		if err != nil {
 			return
 		}
-		ctx.JSON(http.StatusOK, gin.H{
-			"msg": a,
-		})
+
+		// 将 openAI 回复的内容写到 “/” 路由上
+		ctx.Writer.Write([]byte(a))
 	})
 
 	app.Run(":80")
