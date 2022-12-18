@@ -1,6 +1,7 @@
 # chatGPT for workflow(快捷指令)
 由GPT机器人编写的一个简单的chatGPT机器人后端
 疯狂套娃GPT持续开发中
+**项目已消毒，请放心使用**
 
 ### 运行容器
 `docker run -itd --name chatGPTForWorkflow -p 80:80 chatgpt-for-workflow `
