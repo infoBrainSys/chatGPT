@@ -4,7 +4,7 @@
 **项目已消毒，请放心使用**
 
 ### 运行容器
-`docker run -itd --name chatGPTForWorkflow -p 80:80 chatgpt-for-workflow `
+`docker run -itd --name chatGPTForWorkflow -p 80:80 scrooge2/chatgpt-for-workflow `
 
 ### 配置
 进入容器
